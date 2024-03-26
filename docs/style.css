@@ -1,0 +1,56 @@
+html {
+  height: 200%;
+  width: 100%;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(circle at 94.3538% 89.6159%, rgb(39, 4, 252) 0%, 20%, rgba(243, 167, 143, 0) 40%), radial-gradient(circle at 6.50391% 88.0371%, rgb(48, 55, 151) 0%, 25%, rgba(216, 150, 121, 0) 50%), radial-gradient(circle at 6.16536% 12.6172%, rgb(122, 35, 255) 0%, 42%, rgba(85, 98, 108, 0) 70%), radial-gradient(circle at 93.6865% 11.4258%, rgb(37, 130, 187) 0%, 42%, rgba(128, 21, 232, 0) 70%), radial-gradient(circle at 48.9014% 49.5215%, rgb(4, 122, 124) 0%, 100%, rgba(28, 46, 59, 0) 100%); opacity: 1;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.bloom-text {
+  color: white; /* Set the color of the text */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Add a soft glow effect */
+  filter: brightness(150%); /* Increase brightness for a bloom effect */
+}
+
+.center{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.darkbackground {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Adjust width as needed */
+  height: 50%; /* Adjust height as needed */
+  max-width: 1500px; 
+  max-height: 400px; 
+  background-color: rgba(0, 0, 100, 0.8); 
+  border-radius: 10px; /* Optional: Add rounded corners */
+  text-align: center; /* Center text horizontally */
+  padding: 20px; /* Optional: Add padding */
+  z-index: 9999; /* Ensure it's on top of other content */
+}
+
+.overlayedtext{
+  position: relative; /* Ensures content appears above the overlay */
+  z-index: 10000; /* Make sure content appears above the overlay */
+}
+
+#video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100; /* Ensures the video is behind all other content */
+  background-size: cover;
+  opacity: 0.5; /* Set the opacity value (0.0 to 1.0) */
+}
