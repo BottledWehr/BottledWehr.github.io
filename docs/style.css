@@ -1,12 +1,41 @@
+@font-face {
+    font-family: 'vcr_osd_monoregular';
+    src: url('vcr_osd_mono_1.001-webfont.woff2') format('woff2'),
+         url('vcr_osd_mono_1.001-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: rgb(0, 6, 46);
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(rgb(0, 6, 46), rgb(60, 3, 145),  rgb(0, 6, 46));
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+
+
 html {
   height: 200%;
   width: 100%;
   margin: 0;
   justify-content: center;
   align-items: center;
-  background-image: radial-gradient(circle at 94.3538% 89.6159%, rgb(39, 4, 252) 0%, 20%, rgba(243, 167, 143, 0) 40%), radial-gradient(circle at 6.50391% 88.0371%, rgb(48, 55, 151) 0%, 25%, rgba(216, 150, 121, 0) 50%), radial-gradient(circle at 6.16536% 12.6172%, rgb(122, 35, 255) 0%, 42%, rgba(85, 98, 108, 0) 70%), radial-gradient(circle at 93.6865% 11.4258%, rgb(37, 130, 187) 0%, 42%, rgba(128, 21, 232, 0) 70%), radial-gradient(circle at 48.9014% 49.5215%, rgb(4, 122, 124) 0%, 100%, rgba(28, 46, 59, 0) 100%); opacity: 1;
-  font-family: 'Roboto', sans-serif;
+  background-image: radial-gradient(circle at 94.3538% 89.6159%, rgb(17, 3, 109) 0%, 20%, rgba(243, 167, 143, 0) 40%), radial-gradient(circle at 6.50391% 88.0371%, rgb(20, 24, 72) 0%, 25%, rgba(216, 150, 121, 0) 50%), radial-gradient(circle at 6.16536% 12.6172%, rgb(52, 16, 106) 0%, 42%, rgba(85, 98, 108, 0) 70%), radial-gradient(circle at 93.6865% 11.4258%, rgb(15, 56, 82) 0%, 42%, rgba(128, 21, 232, 0) 70%), radial-gradient(circle at 48.9014% 49.5215%, rgb(1, 53, 55) 0%, 100%, rgba(28, 46, 59, 0) 100%); opacity: 1;
+  font-family: 'vcr_osd_monoregular', sans-serif;
   font-weight: bold;
+}
+
+body{
+  overflow: overlay;
 }
 
 .bloom-text {
@@ -30,7 +59,7 @@ html {
   height: 50%; /* Adjust height as needed */
   max-width: 1500px; 
   max-height: 400px; 
-  background-color: rgba(0, 0, 100, 0.8); 
+  background-color: rgba(10, 6, 46, 0.8); 
   border-radius: 10px; /* Optional: Add rounded corners */
   text-align: center; /* Center text horizontally */
   padding: 20px; /* Optional: Add padding */
@@ -53,4 +82,29 @@ html {
   z-index: -100; /* Ensures the video is behind all other content */
   background-size: cover;
   opacity: 0.5; /* Set the opacity value (0.0 to 1.0) */
+}
+
+#lowergradient {
+  position: absolute;
+  bottom: -46%;
+  right: 0;
+  min-width: 100%; 
+  min-height: 600px;
+  width: auto;
+  height: 100px;
+  z-index: -99;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 6, 46));
+}
+
+.bottombackground {
+  position: absolute;
+  bottom: -100%;
+  right: 0;
+  width: auto; /* Adjust width as needed */
+  min-width: 100%; 
+  height: auto; /* Adjust height as needed */
+  min-height: 500px;
+  background-color: rgb(0, 6, 46); 
+  text-align: center; /* Center text horizontally */
+  z-index: 9999; /* Ensure it's on top of other content */
 }
